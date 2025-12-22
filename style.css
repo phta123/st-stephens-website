@@ -1,0 +1,2501 @@
+/* Theme: Modern Catholic Light - v7.0 */
+
+:root {
+    /* --- Sacred Light Palette --- */
+    --bg-main: #F9F9F7;
+    /* Warm Alabaster */
+    --bg-glass: rgba(255, 255, 255, 0.9);
+    --sacred-gold: #C5A059;
+    /* Muted Gold */
+    --sacred-gold-light: rgba(197, 160, 89, 0.08);
+    --stone-grey: #E5E5E0;
+    --text-main: #050505;
+    /* Deepest Black */
+    --text-light: #333333;
+    /* Dark Grey */
+    /* Dark Grey */
+    --advent-purple: #5D2A8C;
+    /* Advent Purple */
+
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* Typography */
+    --font-serif: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-script: 'Playfair Display', serif;
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 100px;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.newsletter-page {
+    /* Background handled by video */
+    position: relative;
+    min-height: 100vh;
+}
+
+.newsletter-background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: grayscale(100%);
+}
+
+.newsletter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(230, 224, 210, 0.85);
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        scroll-snap-type: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+button {
+    cursor: pointer;
+}
+
+/* --- Navigation --- */
+#glass-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--sacred-gold);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.nav-logo img {
+    height: 120px;
+    width: auto;
+    filter: invert(76%) sepia(15%) saturate(1339%) hue-rotate(1deg) brightness(91%) contrast(86%);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--sacred-gold);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.donate-btn {
+    background: var(--text-main);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 2px;
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border: 1px solid var(--text-main);
+}
+
+.donate-btn:hover {
+    background: transparent;
+    color: var(--text-main);
+}
+
+/* --- Hero --- */
+#hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+#hero-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: saturate(1.1) brightness(0.9);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+#hero-main-text {
+    z-index: 2;
+    text-align: center;
+    color: white;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pre-title {
+    font-family: 'Bodoni Moda', serif;
+    font-style: normal;
+    font-size: 2.5rem;
+    /* Increased from 0.9rem */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    /* Increased spacing for larger text */
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    /* Thinner weight for elegance */
+}
+
+.st-stephens-title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.line-1 {
+    font-size: 8rem;
+    /* Increased from 5rem */
+    display: block;
+    color: white;
+    font-family: 'Bodoni Moda', serif;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+    font-weight: 700;
+    /* Bolder */
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.line-2 {
+    font-size: 4rem;
+    /* Increased from 3rem */
+    display: block;
+    font-style: italic;
+    font-family: 'Bodoni Moda', serif;
+    color: var(--sacred-gold);
+    margin-top: 15px;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Typography */
+@media (max-width: 1200px) {
+    .line-1 {
+        font-size: 6rem;
+    }
+
+    .pre-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .line-1 {
+        font-size: 4rem;
+    }
+
+    .line-2 {
+        font-size: 2.5rem;
+    }
+
+    .pre-title {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .line-1 {
+        font-size: 3rem;
+    }
+
+    .line-2 {
+        font-size: 2rem;
+    }
+
+    .pre-title {
+        font-size: 1rem;
+    }
+}
+
+/* Restored Location Pill */
+.location-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    background: white;
+    padding: 10px 25px;
+    border-radius: var(--radius-pill);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: var(--text-main);
+    opacity: 0;
+    animation: fadeInUp 1s 1s forwards;
+}
+
+.location-pill span {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* --- Content Layout --- */
+#content {
+    max-width: 1400px;
+    margin: 0 auto;
+    /* Increased margin/padding to bring the panel down */
+    padding: 0 40px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    /* gap: 60px; Removed gap to let sections control spacing */
+}
+
+/* --- Welcome Panel Split Layout --- */
+/* --- Welcome Panel Split Layout --- */
+.welcome-panel {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    /* Full width */
+    min-height: 100vh;
+    scroll-snap-align: start;
+    margin-bottom: 0;
+    /* Remove borders/padding from panel itself */
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    /* Moved to wrapper if needed, or removed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 160px 60px 60px;
+    display: flex;
+    align-items: stretch;
+    gap: 60px;
+    height: 100%;
+    /* min-height: 100vh; Removed to let flex center it */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+.panel-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: grayscale(100%);
+    border-radius: 0;
+    /* Full width, no radius */
+}
+
+.panel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(230, 224, 210, 0.85);
+    /* Stronger warm overlay */
+    z-index: -1;
+    border-radius: 0;
+    /* Full width, no radius */
+}
+
+/* Right Side: Text */
+.welcome-text-container {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.editorial-heading {
+    font-family: var(--font-serif);
+    /* Reset to allow children to define sizes */
+    color: var(--text-main);
+    margin: 0 0 20px 0;
+    line-height: 1.05;
+    /* Tighter line height */
+    letter-spacing: -0.02em;
+    /* Tighter tracking */
+    text-align: left;
+}
+
+.welcome-pre {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.welcome-title {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    /* Large and impactful */
+    font-weight: 400;
+    display: block;
+    line-height: 0.9;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    letter-spacing: -0.03em;
+}
+
+.editorial-heading .italic {
+    font-family: var(--font-script);
+    font-size: 2.2rem;
+    color: var(--sacred-gold);
+    font-weight: 400;
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.editorial-body {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    /* Matched to welcome-pre */
+    text-transform: uppercase;
+    /* Matched to welcome-pre */
+    letter-spacing: 3px;
+    /* Matched to welcome-pre */
+    line-height: 1.6;
+    color: var(--text-light);
+    font-weight: 600;
+    /* Matched to welcome-pre */
+    margin-top: 15px;
+}
+
+/* Left Side: Bento Grid Cards */
+.bento-links-grid {
+    flex: 1.2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.bento-card-link {
+    background-color: white;
+    border: 1px solid var(--stone-grey);
+    padding: 30px 20px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: var(--transition-smooth);
+    text-align: center;
+    aspect-ratio: 1.5/1;
+    /* Rectangular card shape */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.bento-card-link:hover {
+    transform: translateY(-5px);
+    border-color: var(--sacred-gold);
+    box-shadow: 0 10px 25px rgba(197, 160, 89, 0.15);
+}
+
+.bento-icon {
+    font-size: 2rem;
+    color: var(--sacred-gold);
+}
+
+.bento-label {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Increased tracking */
+    font-size: 0.85rem;
+    /* Slightly smaller */
+    color: var(--text-main);
+}
+
+.bento-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: -5px;
+    /* Pull closer to label */
+    line-height: 1.4;
+}
+
+/* Highlight the Newsletter card slightly */
+.highlight-bento {
+    background-color: var(--sacred-gold-light);
+    border-color: rgba(197, 160, 89, 0.2);
+}
+
+
+/* --- Mass Cards --- */
+.rectangles-container {
+    display: flex;
+    gap: 20px;
+    /* height: 450px; Removed to prevent layout issues */
+    position: relative;
+    /* For scroll button */
+
+    /* Full Screen Snap */
+    min-height: 100vh;
+    scroll-snap-align: start;
+    flex-direction: row;
+    /* Keep horizontal */
+    align-items: center;
+    /* Center cards vertically */
+    padding: 100px 20px 0 20px;
+    /* Add side padding */
+    box-sizing: border-box;
+}
+
+.travel-card {
+    position: relative;
+    flex: 1;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    background: white;
+    height: 70vh;
+    /* Increase height to fill screen */
+}
+
+.travel-card.open {
+    flex: 4;
+}
+
+.card-bg-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s;
+}
+
+.travel-card:hover .card-bg-image {
+    transform: scale(1.05);
+}
+
+.glass-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    pointer-events: none;
+}
+
+.vertical-text {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: white;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 5;
+    opacity: 1;
+    transition: opacity 0.3s;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.travel-card.open .vertical-text {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s 0.2s;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent 90%);
+}
+
+.travel-card.open .card-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-content h3 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+    color: var(--sacred-gold);
+}
+
+.schedule-grid {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.schedule-col h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.schedule-col p {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.card-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    background: white;
+    color: var(--text-main);
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.action-btn:hover {
+    background: var(--sacred-gold);
+    color: white;
+}
+
+/* --- Sacraments --- */
+#sacraments-section {
+    padding: 50px 0;
+    min-height: 100vh;
+    position: relative;
+    /* For scroll button */
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sacraments-squares-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.sacrament-square {
+    aspect-ratio: 1;
+    background: white;
+    border: 1px solid var(--stone-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.sacrament-square:hover {
+    background: var(--text-main);
+    transform: translateY(-5px);
+    border-color: var(--text-main);
+}
+
+.sacrament-square p {
+    font-family: var(--font-serif);
+    margin-bottom: 15px;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.sacrament-square:hover p {
+    color: var(--sacred-gold);
+}
+
+.sacrament-logo {
+    height: 50px;
+    filter: invert(0.2);
+    transition: 0.3s;
+}
+
+.sacrament-square:hover .sacrament-logo {
+    filter: invert(1) brightness(2);
+}
+
+/* --- Modals --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-glass-card,
+.contact-modal-glass-card {
+    background: #fff;
+    width: 90%;
+    max-width: 1200px;
+    height: 85vh;
+    border-radius: var(--radius-md);
+    position: relative;
+    transform: translateY(50px);
+    transition: transform 0.4s ease;
+    overflow: hidden;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-overlay.active .modal-glass-card,
+.modal-overlay.active .contact-modal-glass-card {
+    transform: translateY(0);
+}
+
+#close-modal-btn,
+#close-contact-modal-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--accent-red, #ef4444);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#close-modal-btn:hover,
+#close-contact-modal-btn:hover {
+    background: #dc2626;
+    /* Darker red on hover */
+    color: white;
+    transform: rotate(90deg);
+}
+
+.modal-content,
+.contact-details {
+    padding: 40px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* Contact Specific */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+.contact-map-container {
+    background: #eee;
+    height: 100%;
+}
+
+.contact-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-item i {
+    width: 30px;
+    color: var(--sacred-gold);
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.contact-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+.contact-item p {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+}
+
+/* Scrollbar */
+.custom-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* --- Mobile Navigation Styles --- */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-nav-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.close-mobile-nav {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mobile-link {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mobile-link.active {
+    color: var(--sacred-gold);
+}
+
+/* --- Mobile Media Queries --- */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    #glass-nav {
+        padding: 10px 20px;
+        height: 80px;
+        flex-direction: row;
+        /* Keep row for logo and hamburger */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links,
+    .desktop-donate {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Hero Section */
+    .line-1 {
+        font-size: 3.5rem;
+        /* Adjusted for smaller screens */
+    }
+
+    .line-2 {
+        font-size: 2rem;
+    }
+
+    .pre-title {
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+
+    #hero-main-text {
+        padding: 0 20px;
+    }
+
+    /* Content Layout */
+    #content {
+        padding: 40px 20px 60px;
+    }
+
+    /* Welcome Panel */
+    .welcome-content-wrapper {
+        flex-direction: column;
+        padding: 100px 20px 40px;
+        /* Reduced top padding */
+        gap: 40px;
+    }
+
+    .welcome-text-container {
+        text-align: center;
+        order: 1;
+        /* Text first */
+    }
+
+    .editorial-heading {
+        text-align: center;
+    }
+
+    .bento-links-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        order: 2;
+        /* Grid second */
+        flex: auto;
+    }
+
+    .bento-card-link {
+        aspect-ratio: auto;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: auto;
+        min-height: 80px;
+    }
+
+    .bento-card-link .bento-icon {
+        font-size: 1.5rem;
+    }
+
+    .bento-card-link .bento-label {
+        font-size: 1rem;
+    }
+
+    /* Mass Cards */
+    .rectangles-container {
+        flex-direction: column;
+        height: auto;
+        padding: 60px 20px 20px;
+        min-height: auto;
+        /* Allow content to dictate height */
+    }
+
+    .travel-card {
+        height: 100px;
+        /* Collapsed height */
+        width: 100%;
+        flex: none;
+        /* Disable flex grow/shrink */
+    }
+
+    .travel-card.open {
+        height: 500px;
+        /* Expanded height */
+        flex: none;
+    }
+
+    .travel-card.open .card-content {
+        padding: 20px;
+        /* Reduce padding on mobile */
+    }
+
+    .vertical-text {
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        font-size: 1.2rem;
+        width: 100%;
+        left: 50%;
+        white-space: normal;
+        /* Allow wrapping if needed */
+    }
+
+    .card-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .schedule-col p {
+        font-size: 1.2rem;
+    }
+
+    /* Sacraments */
+    #sacraments-section {
+        padding: 60px 20px;
+    }
+
+    .sacraments-squares-container {
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns on mobile */
+    }
+
+    /* Newsletter Section */
+    .newsletter-columns-container {
+        flex-direction: column;
+    }
+
+    .newsletter-column {
+        max-width: 100% !important;
+        /* Force full width */
+    }
+
+    .glass-card {
+        padding: 15px;
+    }
+
+    .card-header h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Modals */
+    .modal-glass-card,
+    .contact-modal-glass-card {
+        width: 95%;
+        height: 90vh;
+        margin: 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        /* Content then map */
+    }
+
+    .contact-map-container {
+        height: 300px;
+        /* Fixed height for map on mobile */
+    }
+
+    /* Schools Overlay & OCIA Overlay Common Mobile Fixes */
+    .schools-grid-overlay,
+    .ocia-overlay-style {
+        position: fixed !important;
+        /* Force fixed to cover screen */
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        /* Revert to 100% to ensure scrolling works */
+        margin: 0 !important;
+        border-radius: 0 !important;
+        z-index: 3000 !important;
+        /* Above everything including nav */
+        padding: 120px 20px 20px !important;
+        /* Reduced bottom padding */
+        overflow-y: auto;
+        /* Allow scrolling */
+        display: flex;
+        flex-direction: column;
+        background: white;
+        /* Ensure background is white */
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        overscroll-behavior: contain;
+        /* Prevent scroll chaining */
+    }
+
+    /* If the user sees "white space", it means the container is taller than the content. */
+    /* If I set height: auto, it will only be as tall as content. */
+    /* But if content is longer than screen, max-height: 100vh + overflow-y: auto allows scroll. */
+    /* So let's try height: auto; max-height: 100vh; */
+
+    .schools-grid-overlay,
+    .ocia-overlay-style {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        /* Keep 100% to cover screen */
+        margin: 0 !important;
+        border-radius: 0 !important;
+        z-index: 3000 !important;
+        padding: 120px 20px 20px !important;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        background: white;
+    }
+
+    /* Wait, if I keep height 100%, it will always be full screen white. */
+    /* The user wants it to "finish". */
+    /* Maybe they mean the *scrolling* goes too far? */
+    /* "big empy bl;ack space" -> blank space. */
+    /* If I have flex-direction: column, and gap: 20px. */
+    /* If the last item is the picture, and there's padding-bottom: 20px. */
+    /* Maybe the container has a minimum height that is too large? */
+    /* Or maybe flex-grow is making something expand? */
+
+    /* Let's look at .schools-grid-overlay specific styles again. */
+    /* It has justify-content: flex-start. */
+
+    /* If I change the background to be on the *content* instead of the fixed container? */
+    /* That would allow the "overlay" to be transparent at the bottom? */
+    /* But the header needs to be on white. */
+
+    /* Let's try to just reduce the bottom padding to 0 or something small? */
+    /* I set it to 20px. */
+
+    /* Maybe the user means the "white part" is the overlay background itself. */
+    /* If I make the overlay height: auto, and max-height: 100vh. */
+    /* Then if content is short, it stops. */
+    /* If content is long, it scrolls within the max-height. */
+    /* This seems to be what they want. */
+
+    .schools-grid-overlay,
+    .ocia-overlay-style {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        /* Revert to 100% to ensure scrolling works */
+        margin: 0 !important;
+        border-radius: 0 !important;
+        z-index: 3000 !important;
+        padding: 120px 20px 20px !important;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        /* Add shadow to show it ends */
+    }
+
+    .schools-grid-overlay {
+        display: flex !important;
+        /* Override grid */
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start !important;
+        /* Ensure content starts at top */
+    }
+
+    /* Show Schools Header on Mobile */
+    .schools-mobile-header {
+        display: flex !important;
+    }
+
+    /* Close Button Mobile Fix */
+    .close-schools-btn,
+    .close-ocia-btn-mobile {
+        position: fixed;
+        /* Fixed relative to viewport */
+        top: 20px;
+        right: 20px;
+        width: 45px;
+        /* Slightly larger */
+        height: 45px;
+        background: var(--accent-red, #ef4444);
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        z-index: 9999 !important;
+        /* Force on top of everything */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Ensure OCIA Overlay resets transforms */
+    .ocia-overlay-style {
+        transform: none !important;
+        perspective: none !important;
+    }
+
+    /* OCIA Specific Mobile Layout */
+    .ocia-app-container {
+        flex-direction: column;
+        height: auto;
+        /* Let content grow */
+        min-height: 100%;
+        overflow: visible;
+        /* Override desktop hidden */
+    }
+
+    .ocia-sidebar {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        /* Allow full height to show all buttons */
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid var(--stone-grey);
+    }
+
+    .ocia-button-list {
+        max-height: none;
+        /* Remove scroll limit */
+        padding: 10px;
+        /* Reduced padding */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns bento style */
+        gap: 8px;
+        /* Slightly tighter gap */
+        overflow-y: visible;
+    }
+
+    .ocia-nav-btn {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 12px 4px;
+        /* Increased vertical padding */
+        border: 1px solid var(--stone-grey);
+        border-radius: 6px;
+        height: 100%;
+        /* Fill the grid cell */
+        min-height: 50px;
+        /* Increased min-height */
+        gap: 0;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        overflow: visible;
+        /* Ensure no clipping */
+        word-break: break-word;
+        /* Prevent overflow */
+    }
+
+    .ocia-nav-btn .ocia-icon {
+        display: none;
+        /* Hide icons if they exist in DOM */
+    }
+
+    .ocia-nav-btn .font-medium {
+        font-size: 0.75rem;
+        /* Slightly larger for readability without icon */
+        line-height: 1.2;
+        font-weight: 500;
+    }
+
+    .ocia-nav-btn.active {
+        border-color: var(--sacred-gold);
+        background: var(--sacred-gold-light);
+        border-right: 1px solid var(--sacred-gold);
+        /* Reset desktop border */
+    }
+
+    .ocia-main-content {
+        height: auto;
+        flex: 1;
+        overflow: visible;
+        /* Let container scroll */
+        display: block;
+        /* Remove flex to avoid height issues */
+    }
+
+    .ocia-content-display {
+        padding: 20px;
+        overflow: visible;
+        height: auto;
+        display: block;
+    }
+
+    /* Schools Cards Mobile */
+    .school-card {
+        min-height: 150px;
+        flex: none;
+        /* Don't shrink */
+    }
+}
+
+/* --- Newsletter App Styles --- */
+
+.newsletter-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.glass-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.glass-card {
+    background: white;
+    border-radius: 20px;
+    /* padding: 25px; Removed for full-width header */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--stone-grey);
+    height: auto;
+    /* Let content define height */
+    margin-bottom: 20px;
+    /* Spacing between cards in same column */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+
+    /* Typography Update */
+    font-family: var(--font-body);
+    /* Inter */
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    /* border-color: var(--sacred-gold); Removed hover border color */
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: var(--advent-purple) !important;
+    background-image: none !important;
+    color: var(--sacred-gold) !important;
+    /* Ensure text is gold */
+    border-radius: 20px 20px 0 0;
+    /* Match card radius top */
+}
+
+.card-header i,
+.mass-schedule .card-header i,
+.intentions .card-header i,
+.news-events .card-header i,
+.news-admin .card-header i,
+.finance .card-header i,
+.news-community .card-header i,
+.news-diocesan .card-header i,
+.contact-info .card-header i {
+    font-size: 1.5rem;
+    color: var(--sacred-gold) !important;
+    background: rgba(255, 255, 255, 0.1);
+    /* Slightly more transparent for gold contrast */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.card-header h3,
+.mass-schedule .card-header h3,
+.intentions .card-header h3,
+.news-events .card-header h3,
+.news-admin .card-header h3,
+.finance .card-header h3,
+.news-community .card-header h3,
+.news-diocesan .card-header h3,
+.contact-info .card-header h3 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    margin: 0;
+    color: var(--sacred-gold) !important;
+}
+
+.scroll-content {
+    flex: 1;
+    overflow-y: auto;
+    /* max-height: 500px;  Optional: limit height if needed, or let grid handle it */
+}
+
+/* Specific Card Styles */
+/* Specific Card Styles - Borders Removed */
+.mass-schedule,
+.intentions,
+.news-events,
+.news-admin {
+    border-top: none;
+}
+
+/* Red */
+
+/* Responsive Mobile */
+/* Already handled in main media query block above */
+
+/* --- Scroll Down Button --- */
+.scroll-indicator-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    z-index: 100;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: none;
+}
+
+.scroll-indicator-btn:hover {
+    transform: translateX(-50%) scale(1.2);
+    background: transparent;
+}
+
+/* Text ring styles removed */
+.center-arrow-svg {
+    width: 40px;
+    height: 40px;
+    color: var(--text-main);
+    opacity: 0.8;
+    animation: arrowJump 1s infinite;
+}
+
+@keyframes arrowJump {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Adjust colors for dark backgrounds (Hero) */
+/* Adjust colors for dark backgrounds (Hero) */
+#hero .scroll-indicator-btn {
+    right: auto;
+    /* Reset right positioning */
+}
+
+#hero .scroll-indicator-btn .center-arrow-svg {
+    color: white;
+    opacity: 0.9;
+}
+
+/* Specific adjustment for Sacraments section */
+#sacraments-section .scroll-indicator-btn {
+    bottom: 130px;
+    /* Moved 100px up from 30px */
+}
+
+/* --- Schools Overlay --- */
+.schools-grid-overlay {
+    position: absolute;
+    top: 160px;
+    /* Match padding-top of welcome-panel */
+    left: 60px;
+    /* Match padding-left */
+    width: calc(50% - 40px);
+    /* Approximate width of left grid area (flex 1.2 vs 1) - adjusted for gap */
+    height: calc(100% - 220px);
+    /* Match grid height (padding top + bottom) */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 20;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Stack vertically as requested "4 cards with 3 schools" implies filling space */
+    gap: 15px;
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.schools-grid-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.close-schools-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--accent-red, #ef4444);
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.close-schools-btn:hover {
+    background: #dc2626;
+}
+
+.school-card {
+    position: relative;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.school-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.school-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s;
+}
+
+.school-card:hover .school-bg {
+    transform: scale(1.05);
+}
+
+.school-content {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    z-index: 2;
+}
+
+.school-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--sacred-gold);
+}
+
+.school-content p {
+    font-size: 0.8rem;
+    margin: 2px 0 0 0;
+    opacity: 0.9;
+}
+
+/* --- OCIA App Overlay --- */
+.ocia-overlay-style {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    background: white;
+    /* Ensure solid background */
+    width: calc(50% + 200px);
+    /* Increased width again */
+    left: -140px;
+    /* Moved another 100px left (-40px - 100px) */
+}
+
+.ocia-app-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.ocia-sidebar {
+    width: 35%;
+    background: #f9fafb;
+    /* gray-50 */
+    border-right: 1px solid var(--stone-grey);
+    display: flex;
+    flex-direction: column;
+}
+
+.ocia-sidebar-header {
+    padding: 24px;
+    background: var(--sacred-gold);
+    /* gold */
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+    gap: 15px;
+}
+
+.ocia-sidebar-header h1 {
+    font-family: var(--font-script);
+    font-style: normal;
+    /* Ensure non-cursive */
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ocia-sidebar-header p {
+    color: #dbeafe;
+    /* blue-100 */
+    font-size: 0.875rem;
+    margin: 4px 0 0 0;
+    font-family: var(--font-body);
+}
+
+.ocia-button-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.ocia-nav-btn {
+    width: 100%;
+    text-align: left;
+    padding: 16px 24px;
+    background: white;
+    border: none;
+    border-bottom: 1px solid #f3f4f6;
+    color: var(--text-light);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+    font-family: var(--font-script);
+    font-style: normal;
+    font-size: 1.1rem;
+    /* Increased for readability */
+}
+
+.ocia-nav-btn:hover {
+    background: #f3f4f6;
+}
+
+.ocia-nav-btn.active {
+    background: #f7f9f0;
+    /* Light olive tint */
+    color: var(--text-main);
+    border-right: 4px solid var(--sacred-gold);
+    /* Gold accent */
+}
+
+.ocia-nav-btn.active .font-medium {
+    font-weight: 600;
+    color: #4a5d23;
+    /* Dark Olive */
+}
+
+/* Main Content */
+.ocia-main-content {
+    flex: 1;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.ocia-content-display {
+    flex: 1;
+    overflow-y: auto;
+    padding: 40px;
+    /* Increased padding */
+}
+
+.reason-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.reason-badge {
+    background: var(--sacred-gold-light);
+    color: #856404;
+    /* Darker gold for text */
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.reason-header h2 {
+    font-family: var(--font-script);
+    font-style: normal;
+    /* Ensure non-cursive */
+    font-size: 2.5rem;
+    /* Larger size */
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.2;
+}
+
+#reason-text {
+    color: var(--text-main);
+    font-size: 1.15rem;
+    /* Slightly larger body text */
+    line-height: 1.8;
+    margin-bottom: 32px;
+    font-family: var(--font-body);
+}
+
+/* Welcome Section Styles */
+.welcome-intro {
+    margin-bottom: 30px;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--sacred-gold);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.contact-value {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    font-weight: 600;
+    font-family: var(--font-body);
+}
+
+/* Verses */
+.verses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.verse-card {
+    padding: 16px;
+    background: #fafaf9;
+    /* stone-50 */
+    border-left: 4px solid #a8a29e;
+    /* stone-400 */
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    gap: 12px;
+}
+
+.verse-icon {
+    color: #d6d3d1;
+    /* stone-300 */
+    font-size: 1.125rem;
+    margin-top: 4px;
+}
+
+.verse-text {
+    font-family: var(--font-script);
+    font-style: normal;
+    /* Removed italic */
+    color: #292524;
+    /* stone-800 */
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
+    line-height: 1.6;
+}
+
+.verse-ref {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #57534e;
+    /* stone-600 */
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+/* Animation */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .ocia-app-container {
+        flex-direction: column;
+    }
+
+    .ocia-sidebar {
+        width: 100%;
+        height: 35%;
+    }
+
+    .ocia-main-content {
+        height: 65%;
+    }
+}
+
+/* --- Video Headers for Newsletter (Updated to Gold) --- */
+.card-header {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 25px;
+    /* Top/Bottom 20, Sides 25 */
+    background: var(--sacred-gold);
+    /* Solid Gold */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 20px 20px 0 0;
+    /* Ensure corners match card */
+    margin-bottom: 0;
+}
+
+/* Removed video bg and overlay styles as they are no longer needed */
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+    color: white;
+    /* White icon */
+    text-shadow: none;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: white;
+    /* White text */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.scroll-content {
+    padding: 25px;
+    /* Add padding back to content */
+    flex: 1;
+    overflow-y: auto;
+}
+
+.finance-amount,
+.finance-breakdown {
+    padding: 0 25px 25px 25px;
+}
+
+/* Update Card Body Typography */
+.glass-card p,
+.glass-card li,
+.glass-card span:not(.badge) {
+    color: var(--text-light);
+    font-weight: 400;
+    /* Clean and modern */
+    margin-bottom: 10px;
+}
+
+.glass-card strong {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+/* Newsletter Subtitles (h4) */
+.glass-card h4 {
+    font-family: var(--font-script);
+    /* Playfair Display */
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+.glass-card summary {
+    font-family: var(--font-script);
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.glass-card summary strong {
+    font-family: var(--font-script);
+    /* Match summary font */
+}
+
+/* Mass Schedule Header Styling */
+.mass-time-header {
+    background: rgba(93, 42, 140, 0.3);
+    /* Advent Purple 30% */
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text-main);
+}
+
+
+
+/* --- RCIA Page Specifics --- */
+#why-catholic-page {
+    padding-top: 120px;
+    /* Account for fixed nav */
+    min-height: 100vh;
+    background-color: var(--bg-main);
+}
+
+.rcia-app-container.full-page-mode {
+    display: flex;
+    height: calc(100vh - 120px);
+    /* Full height minus nav */
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* Reusing existing RCIA styles but ensuring they work in this context */
+.rcia-sidebar {
+    width: 350px;
+    background: var(--bg-main);
+    border-right: 1px solid var(--stone-grey);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.rcia-sidebar-header {
+    padding: 30px;
+    border-bottom: 1px solid var(--stone-grey);
+}
+
+.rcia-sidebar-header h1 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rcia-sidebar-header p {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin: 5px 0 0 0;
+    padding-left: 32px;
+    /* Align with text of h1 */
+}
+
+.rcia-button-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rcia-nav-btn {
+    text-align: left;
+    background: white;
+    border: 1px solid transparent;
+    padding: 15px 20px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rcia-nav-btn:hover {
+    background: white;
+    border-color: var(--sacred-gold);
+    transform: translateX(5px);
+    color: var(--text-main);
+}
+
+.rcia-nav-btn.active {
+    background: var(--text-main);
+    color: white;
+    border-color: var(--text-main);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.rcia-main-content {
+    flex: 1;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.rcia-content-display {
+    flex: 1;
+    overflow-y: auto;
+    padding: 60px 80px;
+}
+
+/* --- Mobile Layout (Bento Grid) --- */
+@media (max-width: 1024px) {
+    .rcia-app-container.full-page-mode {
+        flex-direction: column;
+        height: auto;
+        /* Allow scrolling on mobile */
+        min-height: calc(100vh - 120px);
+    }
+
+    .rcia-sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--stone-grey);
+        overflow: visible;
+        /* Allow grid to expand */
+    }
+
+    .rcia-sidebar-header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .rcia-sidebar-header h1 {
+        justify-content: center;
+    }
+
+    .rcia-sidebar-header p {
+        padding-left: 0;
+    }
+
+    .rcia-button-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 Columns */
+        gap: 10px;
+        padding: 15px;
+        overflow-y: visible;
+        /* No scroll, show all */
+        max-height: none;
+        /* Remove height restriction */
+    }
+
+    .rcia-nav-btn {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 8px 4px;
+        min-height: 60px;
+        /* Thinner cards */
+        font-size: 0.75rem;
+        gap: 4px;
+        border: 1px solid var(--stone-grey);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    }
+
+    .rcia-nav-btn:hover {
+        transform: translateY(-3px);
+    }
+
+    .rcia-content-display {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rcia-button-list {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .rcia-nav-btn {
+        padding: 10px 5px;
+        font-size: 0.7rem;
+    }
+}
+
+/* --- Typography Effects --- */
+.drop-cap {
+    float: left;
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    line-height: 0.8;
+    padding-right: 15px;
+    padding-top: 5px;
+    color: var(--sacred-gold);
+    font-weight: 700;
+}
+
+.poetic-text {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    white-space: pre-line;
+    /* Respects line breaks in HTML source if formatted that way, or we use <br> */
+}
+
+.poetic-text p {
+    margin-bottom: 20px;
+}
+
+/* --- Caritas Page Styles --- */
+.caritas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.caritas-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border-left: 4px solid transparent;
+    /* Colored border set by JS/Modifier */
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.caritas-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.caritas-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.caritas-role {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.caritas-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.caritas-desc {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.caritas-name {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.caritas-contact-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    color: #d97706;
+    /* Amber/Orange */
+}
+
+.caritas-contact-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--stone-grey);
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.caritas-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+}
+
+.caritas-contact-row a {
+    color: var(--text-light);
+    transition: color 0.2s;
+}
+
+.caritas-contact-row a:hover {
+    color: var(--sacred-gold);
+    text-decoration: underline;
+}
+
+/* Category Colors (using CSS variables where possible or hardcoded to match React logic but themed) */
+.cat-leadership {
+    border-color: #93c5fd;
+    background-color: #eff6ff;
+}
+
+/* Blue 50/200 */
+.cat-leadership .caritas-icon {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.cat-leadership.caritas-card {
+    background: white;
+}
+
+/* Override bg for card body, keep border */
+
+.cat-advice {
+    border-color: #a7f3d0;
+}
+
+/* Emerald */
+.cat-advice .caritas-icon {
+    background: #d1fae5;
+    color: #059669;
+}
+
+.cat-religious {
+    border-color: #ddd6fe;
+}
+
+/* Violet */
+.cat-religious .caritas-icon {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.cat-community {
+    border-color: #fde68a;
+}
+
+/* Amber */
+.cat-community .caritas-icon {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.cat-food_warmth {
+    border-color: #fecdd3;
+}
+
+/* Rose */
+.cat-food_warmth .caritas-icon {
+    background: #ffe4e6;
+    color: #e11d48;
+}
+
+
+/* Filter Tabs */
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 1px solid var(--stone-grey);
+    background: white;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.filter-btn:hover {
+    background: var(--stone-grey);
+}
+
+.filter-btn.active {
+    background: var(--text-main);
+    /* Black/Dark */
+    color: white;
+    border-color: var(--text-main);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flashing Notice Animation */
+@keyframes flashPurple {
+
+    0%,
+    100% {
+        background-color: transparent;
+        color: var(--text-main);
+    }
+
+    50% {
+        background-color: rgba(93, 42, 140, 0.3);
+        color: var(--text-main);
+    }
+}
+
+.flash-notice {
+    animation: flashPurple 3s infinite ease-in-out;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/ *   - - -   N e w s l e t t e r   C a r d   A n i m a t i o n   - - -   * /     . n e w s l e t t e r - c a r d - e f f e c t    {
+                 p o s i t i o n :    r e l a t i v e ;
+                 o v e r f l o w :    h i d d e n ;
+                 z - i n d e x :    0 ;
+                 b o r d e r :    n o n e    ! i m p o r t a n t ;
+                 / *   R e m o v e   s t a n d a r d   b o r d e r   t o   l e t   a n i m a t i o n   s h i n e   * /     
+}
+
+         / *   R o t a t i n g   G r a d i e n t   * /     . n e w s l e t t e r - c a r d - e f f e c t : : b e f o r e    {
+                 c o n t e n t :    ' '  ;
+                 p o s i t i o n :    a b s o l u t e ;
+                 t o p :    - 5 0 % ;
+                 l e f t :    - 5 0 % ;
+                 w i d t h :    2 0 0 % ;
+                 h e i g h t :    2 0 0 % ;
+                 b a c k g r o u n d :    c o n i c - g r a d i e n t ( t r a n s p a r e n t ,                              t r a n s p a r e n t ,                              t r a n s p a r e n t ,                              v a r ( - - s a c r e d - g o l d ) ) ;
+                 a n i m a t i o n :    r o t a t e - b o r d e r   4 s   l i n e a r   i n f i n i t e ;
+                 z - i n d e x :    - 2 ;
+         
+}
+
+         / *   I n n e r   M a s k   t o   c r e a t e   " B o r d e r "    l o o k   * /     . n e w s l e t t e r - c a r d - e f f e c t : : a f t e r    {
+                 c o n t e n t :    ' '  ;
+                 p o s i t i o n :    a b s o l u t e ;
+                 i n s e t :    3 p x ;
+                 / *   C o n t r o l s   b o r d e r   t h i c k n e s s   * /             b a c k g r o u n d :    w h i t e ;
+                 / *   M a t c h e s   c a r d   b a c k g r o u n d   * /             b o r d e r - r a d i u s :    c a l c ( v a r ( - - r a d i u s - s m )   -   3 p x ) ;
+                 z - i n d e x :    - 1 ;
+         
+}
+
+         @ k e y f r a m e s   r o t a t e - b o r d e r    {
+                 0 %    {
+                             t r a n s f o r m :    r o t a t e ( 0 d e g ) ;
+                     
+    }

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why be Catholic? | St. Stephen's Parish</title>
+    <link rel="stylesheet" href="style.css?v=7.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&family=Playfair+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav id="glass-nav">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="image/Logo1.png" alt="St. Stephen Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#mass-times-section">Mass Times</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="index.html#sacraments-section">Sacraments</a></li>
+            <li><a href="#contact-modal-overlay" id="contact-link">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button class="hamburger-menu" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Mobile Nav Overlay -->
+        <div class="mobile-nav-overlay">
+            <button class="close-mobile-nav" aria-label="Close Menu">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-link">Home</a></li>
+                <li><a href="index.html#mass-times-section" class="mobile-link">Mass Times</a></li>
+                <li><a href="newsletter.html" class="mobile-link">Newsletter</a></li>
+                <li><a href="index.html#sacraments-section" class="mobile-link">Sacraments</a></li>
+                <li><a href="#contact-modal-overlay" class="mobile-link" id="mobile-contact-link">Contact</a></li>
+            </ul>
+        </div>
+
+        <a href="https://www.dioceseofbrentwood.net/donations/?parish=manor-park"
+            class="donate-btn desktop-donate">Donate</a>
+    </nav>
+
+    <main id="why-catholic-page" class="page-container">
+        <div class="rcia-app-container full-page-mode">
+            <!-- Sidebar / Navigation -->
+            <div class="rcia-sidebar">
+                <div class="rcia-sidebar-header">
+                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <div>
+                            <h1><i class="fas fa-church"></i> Why be Catholic?</h1>
+                            <p>Discover the beauty of the faith</p>
+                        </div>
+                        <a href="index.html" class="action-btn map-btn"
+                            style="background: white; color: var(--text-main); border: 1px solid var(--stone-grey); box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 8px 15px; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; border-radius: 4px; cursor: pointer; text-decoration: none;">
+                            <i class="fa-solid fa-arrow-left"></i> Back
+                        </a>
+                    </div>
+                </div>
+                <div id="button-container" class="rcia-button-list custom-scroll">
+                    <!-- Buttons injected via JS -->
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="rcia-main-content">
+                <div id="content-display" class="rcia-content-display custom-scroll">
+                    <div class="fade-in">
+                        <div class="reason-header">
+                            <span class="reason-badge"><span id="reason-number">1</span></span>
+                            <h2 id="reason-title">Loading...</h2>
+                        </div>
+                        <div id="reason-text">Loading content...</div>
+                        <div id="verses-container" class="verses-container">
+                            <!-- Verses injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="contact-modal-overlay" class="modal-overlay hidden">
+        <div class="contact-modal-glass-card">
+            <button id="close-contact-modal-btn"><i class="fa-solid fa-times"></i></button>
+            <div class="contact-grid">
+                <div class="contact-details custom-scroll">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>146 Little Ilford Lane<br>Manor Park, London</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>020 8478 1895</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>manorpark@brcdt.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <div>
+                            <h4>Website</h4>
+                            <p>www.ss-stephenandnicholas.org.uk</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <div>
+                            <h4>Clergy</h4>
+                            <p>Fr. Tony Grant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map-container">
+                    <iframe
+                        src="https://maps.google.com/maps?q=St.+Stephen’s+Catholic+Church+146+Little+Ilford+Lane,+Manor+Park,+London+E12+5PJ&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=7.1"></script>
+</body>
+
+</html>

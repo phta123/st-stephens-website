@@ -1,0 +1,291 @@
+{
+  "settings": {
+    "primary_color": "#1e3a8a",
+    "secondary_color": "#b45309",
+    "text_color": "#333333",
+    "bg_color": "#f8f9fa",
+    "font_heading": "'Cinzel', serif",
+    "font_body": "'Inter', sans-serif"
+  },
+  "header": {
+    "badge_text": "Weekly Newsletter",
+    "title": "21 DECEMBER",
+    "subtitle": "Fourth Sunday of Advent",
+    "description": "Mass Times and Intentions | St. Stephen’s Church, Manor Park"
+  },
+  "columns": [
+    {
+      "cards": [
+        {
+          "type": "mass_schedule",
+          "title": "Mass Schedule",
+          "icon": "fa-clock",
+          "class": "mass-schedule",
+          "days": [
+            {
+              "title": "Morning Prayers",
+              "details": "Mondays, Tuesdays, Thursdays, and Fridays at 8.40am, followed by the Rosary, and then Mass."
+            },
+            {
+              "title": "SAT 20 DEC - 6:00 PM (Vigil)",
+              "meta": [
+                { "text": "Weekday of Advent 20 December", "style": "italic" },
+                { "text": "Vigil Mass for 4th Sunday of Advent Year A", "style": "italic" },
+                { "text": "The People of the Parish. Souls in purgatory.", "style": "normal" }
+              ]
+            },
+            {
+              "title": "SUN 21 DEC - 9:00 AM & 11:00 AM",
+              "meta": [
+                { "text": "FOURTH SUNDAY OF ADVENT YEAR A", "style": "bold-highlight" },
+                { "text": "9:00am: Connaghan Family Well-being.", "style": "normal" },
+                { "text": "11:00am: Joseph Davids RIP. Ratna Sabestina Pakirathan RIP.", "style": "normal" }
+              ]
+            },
+            {
+              "title": "MON 22 DEC - No Mass",
+              "meta": [
+                { "text": "Weekday of Advent 22 December", "style": "italic" },
+                { "text": "9.15 a.m. No Mass.", "style": "normal" }
+              ]
+            },
+            {
+              "title": "TUE 23 DEC - 9:15 AM",
+              "meta": [
+                { "text": "Weekday of Advent 23 December", "style": "italic" },
+                { "text": "Damien Luis RIP. Joanita Braganza Well-being.", "style": "normal" }
+              ]
+            },
+            {
+              "title": "WED 24 DEC - CHRISTMAS EVE",
+              "meta": [
+                { "text": "CHRISTMAS EVE", "style": "italic" },
+                { "text": "6.00 pm Children’s Mass: The children of the Parish. Intentions.", "style": "normal" },
+                { "text": "8.00 pm Carol Service", "style": "normal" },
+                { "text": "9.30 pm \"Midnight\" Mass: Colin & Philomena Davids RIP.", "style": "normal" }
+              ]
+            },
+            {
+              "title": "THU 25 DEC - CHRISTMAS DAY",
+              "meta": [
+                { "text": "THE NATIVITY OF THE LORD (CHRISTMAS DAY)", "style": "bold-highlight" },
+                { "text": "9.00 am: Christina Intentions. Ratna Sabestina Pakirathan RIP.", "style": "normal" },
+                { "text": "11.00 am: Susan Chery Birthday Intention.", "style": "normal" }
+              ]
+            },
+            {
+               "title": "FRI 26 DEC - 11:00 AM",
+               "meta": [
+                 { "text": "BOXING DAY (FEAST OF ST STEPHEN & ST JOHN)", "style": "italic" },
+                 { "text": "For the Altar Servers Intentions.", "style": "normal" }
+               ]
+            },
+            {
+              "title": "SAT 27 DEC",
+              "meta": [
+                { "text": "Feast of the Holy Innocents", "style": "italic" },
+                { "text": "11 am Mass: Anonymous. Prayers of Intention. Jaime Ferreira RIP.", "style": "normal" },
+                { "text": "6.00 p.m. Vigil Mass for the Feast of the Holy Family: Connelly & O’Neil Family Intentions. People of the Parish.", "style": "normal" }
+              ]
+            },
+            {
+              "title": "SUN 28 DEC - HOLY FAMILY",
+              "meta": [
+                { "text": "FEAST OF THE HOLY FAMILY", "style": "bold-highlight" },
+                { "text": "9.00 a.m. E.M. Albert RIP", "style": "normal" },
+                { "text": "11.00 a.m. 48th Wedding Anniversary of Bridget & Roland Okereke.", "style": "normal" }
+              ]
+            },
+            {
+              "title": "MON 29 DEC - No Mass",
+              "meta": [
+                { "text": "National Feast of St Thomas of Canterbury, Bp, M.", "style": "italic" },
+                { "text": "9.15 a.m. No Mass.", "style": "normal" }
+              ]
+            },
+            {
+              "title": "TUE 30 DEC - 9:15 AM",
+              "meta": [
+                 { "text": "Sixth Day within the Octave of the Nativity of the Lord.", "style": "italic" }
+              ]
+            },
+            {
+              "title": "WED 31 DEC - No Mass",
+              "meta": [
+                { "text": "Seventh Day within the Octave of the Nativity of the Lord.", "style": "italic" },
+                 { "text": "9.15 am. No Mass.", "style": "normal" }
+              ]
+            },
+            {
+              "title": "THU 1 JAN - 11:00 AM",
+              "meta": [
+                { "text": "THE SOLEMNITY OF MARY, THE HOLY MOTHER OF GOD", "style": "bold-highlight" },
+                { "text": "Intention for all mothers, expectant mothers, and carers of children.", "style": "normal" }
+              ]
+            },
+            {
+               "title": "FRI 2 JAN - 9:15 AM",
+               "meta": [
+                 { "text": "Memorial of Ss Basil the Great and Gregory Nazianzen. Bpp, Dd.", "style": "italic" }
+               ]
+            },
+            {
+               "title": "SAT 3 JAN - 6:00 PM (Vigil)",
+               "meta": [
+                 { "text": "Weekday of Christmas Time", "style": "italic" },
+                 { "text": "Vigil Mass for the Feast of the Holy Family. People of the parish Intentions.", "style": "normal" }
+               ]
+            },
+            {
+              "title": "SUN 4 JAN - 9:00 AM & 11:00 AM",
+              "meta": [
+                { "text": "SECOND SUNDAY AFTER THE NATIVITY", "style": "bold-highlight" },
+                { "text": "9.00 a.m. Deceased members of the Grant Family RIP.", "style": "normal" },
+                { "text": "11.00 a.m. Hazel Parry RIP.", "style": "normal" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cards": [
+        {
+          "type": "simple_text",
+          "title": "Intentions",
+          "icon": "fa-hands-praying",
+          "class": "intentions",
+          "content": "<h4 style='margin-bottom: 10px; color: var(--primary-color);'>Prayer List</h4><p>John Oruche, Veronica Ojuri, Margaret, Chris, Loreen Phillips, Kathleen Phillips, Baby Simon Elliott, Clemence Sanderson, Kathleen Kavanagh, Mary Jane Ememe, Jay Agnes, Teresa & Patrick Moran., Carmel Brady, Colin Agustine, and Ann Baker.</p>"
+        },
+        {
+          "type": "accordion_group",
+          "title": "Diocesan",
+          "icon": "fa-church",
+          "class": "news-diocesan",
+          "items": [
+            {
+              "summary": "Right to Life",
+              "content": "RIGHT TO LIFE & EUTHANASIA BILL: If you would like to voice your concerns over the new proposed Euthanasia Bill, you can contact your chosen House of Lords Members at: <a href='https://righttolife.org.uk/aspeersletter' target='_blank'>https://righttolife.org.uk/aspeersletter</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cards": [
+        {
+          "type": "accordion_group",
+          "title": "Parish Events",
+          "icon": "fa-calendar-check",
+          "class": "news-events",
+          "items": [
+            {
+              "summary": "Christmas Cards",
+              "content": "CHRISTMAS CARDS: Please take a Christmas Card at the back of the church, designed by a pupil of St Winefride’s school, which gives the dates and times of the Masses and Carol Service during Christmas."
+            },
+            {
+              "summary": "Children's Mass",
+              "content": "CHILDREN’S MASS ON CHRISTMAS EVE ON WEDNESDAY: The Children’s Mass will be at 6 pm on Christmas Eve. It would be nice if the children could dress up for the Mass, especially as little angels, Magi, or the Holy Family!"
+            },
+            {
+              "summary": "Christmas Offerings",
+              "content": "CHRISTMAS OFFERINGS: The Collections at Christmas Masses will be the Christmas Offerings for Fr Tony Grant which will help pay for the Insurance and Tax on his car, and any other expenses he may have during the year. Thank-you for your generosity! THIS CAN BE GIFT AIDED!<br>No Second Collections at Christmas Masses, only Christmas Offerings!"
+            },
+             {
+              "summary": "Simbang Gabi Mass",
+              "content": "SIMBANG GABI MASS, Faith of the Filippino Family: The Filippino Community raised £210.46p for the Boiler Fund at their Mass. We thank them for their generosity."
+            }
+          ]
+        },
+        {
+          "type": "accordion_group",
+          "title": "Notices",
+          "icon": "fa-clipboard-list",
+          "class": "news-admin",
+          "items": [
+             {
+               "summary": "Important Notices",
+               "open": true,
+               "content": "<p><strong class='flash-notice'>NO SURGERY:</strong> There will be no Surgery from Monday 22nd December until it begins again on Monday 5th January 5.30pm-6.30pm.</p><p><strong class='flash-notice'>NO MASS ON MONDAY 22ND DECEMBER.</strong></p><p><strong class='flash-notice'>NO MASS ON MONDAY 29TH DECEMBER DUE TO WORKS!</strong></p><p><strong class='flash-notice'>NO NEWSLETTER NEXT WEEK:</strong> Mass times for next week are in this Newsletter!</p>"
+             },
+             {
+               "summary": "Boiler Fund",
+               "content": "NEW BOILER: I am continuing to raise funds for a new Gas Boiler and new heater for next year which is estimated to cost between £12,000- £15,000. We seem to be spending far too much money trying to repair the old one. We have some of the costs for a new boiler from the previous Boiler Fund, but we need to raise more money. If you wish to donate to the Boiler Fund, then donate through the Tap & Go, envelopes, or cheques. Gift Aid envelopes will be at the back of church for those registered for Gift Aid. Please use them. Or if you pay any tax, please register asap.<br><br>BOILER FUND: We raised £250.46 for the Boiler Fund last week. Many thanks for your generosity and kindness!<br><br>If you are giving a donation for the Boiler Fund, then please place the donation in a Boiler Fund envelope which are at the back of the church. The same thing with Tap-and-Go (choose Boiler Fund Logo when paying for the Boiler Fund, click on “Boiler Fund”)."
+             },
+             {
+               "summary": "Second Collection",
+               "content": "SECOND COLLECTION: This Sunday 21st December, there will be a Second Collection for the Friends of the Holy Land. This is a Christian charity that helps Christians in the Holy Land who are suffering great hardship since the war in Gaza and the West Bank. Their livelihoods depended on pilgrims who the visited Holy Sites but tourism/pilgrimages have ceased. In places like Nazareth, Bethlehem, and Jerusalem, the Israeli government strictly controls travel and movement of not only Muslim Palestinians but also Christian Palestinians, meaning they have no source of income and it is very difficult to buy basic stuff."
+             },
+             {
+               "summary": "Gift Aid Scheme",
+               "content": "GIFT AID SCHEME: If you are part of the Gift Aid Scheme, then please put your Gift Aid Number on the envelopes for any contributions because we can claim the tax back. And if you pay tax, even on savings, then you can join the Gift Aid Scheme. For example, if someone donated £100, and if it is not Gift Aid, then we lose £25 to the government. So, please always use your Gift Aid Number (if you have one) on any donations that you give. Or please sign up to the Gift Aid Scheme. It is simply a form that we register. It does not affect your own taxes, but it means we can simply claim the tax back on the contributions. It can be the First Collections, Boiler Fund, Second Collections, or any other donations. I CANNOT EMPHASISE HOW IMPORTANT THIS IS TO BE GIFT AID REGISTERED IF YOU CAN!"
+             },
+             {
+               "summary": "Cordoned Off Areas",
+               "content": "CORDENED OFF AREAS IN THE CHURCH: The side aisles and the transept side chapel pews have been cordoned off as a precautionary measure. Though the windows that open are boarded up now, the diocese has decided the side aisles and side chapel pews must be cordoned off. However, there will be further works that need to be carried out in the future when a date will be fixed in the New Year!"
+             },
+             {
+               "summary": "Sale of St Nicholas",
+               "content": "SALE OF ST NICHOLAS’ CHURCH ON OPEN MARKET: As I am sure you are all aware we have been trying to sell St Nicholas’s church so we can pay off our debts and to carry out badly needed work to our church hall above the sacristy and in St Stephen’s church. I am pleased to inform you all that the Board of Trustees have approved the sale of St Nicholas’ church on the open market. There are further steps that we will have to take before the St Nicholas’ church can be sold but I will keep you all updated. The sale of St Nicholas’ church has been approved by the parishioners of St Stephen’s & St Nicholas, the Parish Council, the Finance Committee, and Fr John Victor, Fr Sean Connelly, and I, Fr Tony Grant. Also, we wish to keep the house attached to the property to develop and either turn it into two flats or sell which will give the parish a much-needed boost to our income. All of this has been discussed with many consultations with the parishioners and has been agreed by the parishioners to sell. But as a matter of form and Canon Law, I inform you yet again that if there are no objections from any parishioners, then we will continue the process of selling St Nicholas’ church on the open market. Fr Tony Grant."
+             },
+             {
+               "summary": "Counters’ Rotas",
+               "content": "<p><strong>Date:</strong> 22/12/2025 | 29/12/2025 | 05/01/2026 | 12/01/2026 | 19/01/2026 | 26/01/2026</p><p><strong>Team:</strong> St Mark | St Luke | St Matthew | St Mark | St Luke | St Matthew</p>"
+             }
+          ]
+        }
+      ]
+    },
+    {
+      "cards": [
+        {
+          "type": "finance",
+          "title": "Offertory",
+          "icon": "fa-sack-dollar",
+          "class": "finance",
+          "amount": "£1002.31",
+          "rows": [
+            { "label": "Offertory 14 December 2025", "value": "" },
+            { "label": "Envelopes", "value": "£250.40" },
+            { "label": "Loose plate", "value": "£353.79" },
+            { "label": "Standing order", "value": "£357.12" },
+            { "label": "Tap & Go", "value": "£41.00" }
+          ],
+          "total_row": { "label": "Total", "value": "£1002.31" },
+          "extra_rows": [
+             { "label": "Boiler Fund (inc. Tap & Go):", "value": "£250.46" },
+             { "label": "Second Collection (tap & go):", "value": "£35.00" },
+             { "label": "Candles:", "value": "£103.13" },
+             { "label": "Second Collections:", "value": "£10.00" },
+             { "label": "Total Extras:", "value": "£398.59", "is_bold": true }
+          ]
+        },
+        {
+          "type": "accordion_group",
+          "title": "Community",
+          "icon": "fa-users",
+          "class": "news-community",
+          "items": [
+            {
+               "summary": "Cleaner Available",
+               "content": "CLEANER: A parishioner called Stinnie is looking for work the weekends as a cleaner/housekeeper. Her telephone number: 07553169818."
+            },
+            {
+               "summary": "Places for Nursery",
+               "content": "PLACES FOR NURSERY, PRE-SCHOOL, YEAR 2 & 4 CHILDREN AT ST WINEFRIEDE’S PRIMARY SCHOOL: There are vacances/places for children for Year 2 & 4 at St Winefride’s Primary School. If anyone is interested or you know someone, then please contact the school on telephone number: 0208-478 0510."
+            },
+            {
+               "summary": "Mary's Meals",
+               "content": "MARY’S MEALS & FOREIGN CURRENCY & RECYCLED BOX: There are more envelopes at the back of the church to put your foreign notes and coins in. Also, there is a recycle box in the Repository for unwanted mobiles, iPads, jewellery, cameras, stamps, etc., and it will be given to Mary’s Meals who converting into cash."
+            },
+            {
+               "summary": "Food Distribution",
+               "content": "FOOD DISTRIBUTION TO THE HOMELESS: The Copts at St Nicholas’ church distribute sandwiches and food to the homeless each Monday at Manor Park Library 8.15pm-10.00pm. They start at St Mary and St George Coptic Orthodox Church, aka St Nicholas church, 21 Gladding Road E12 5DD from 7:00-8:00pm for food preparation and distribute the food from 8:15-10:00pm in front of Manor Park Library. They give sandwiches, fruits, crisps, cupcakes, hot soup, and hot drinks. They also sometimes give clothes and some toiletries. If you would like to volunteer to help them or donate food, etc., then please contact us by telephone Fr Tony (0208-478-1895) or by emailing Fr Tony at: manorpark@brcdt.org. Or contact Halim, the Copts’ secretary at: halim.salama@aon.co.uk. To find when you can help or deliver food to St Nicholas’ church."
+            }
+          ],
+          "footer_text": "<p><strong>Sick in Hospital:</strong> If a family member has to go into hospital, then contact the nurse on duty to inform the Catholic Chaplain, Sr Shanthi, that the patient is a Catholic and they require Holy Communion or a priest to anoint them.</p>"
+        }
+      ]
+    }
+  ]
+}

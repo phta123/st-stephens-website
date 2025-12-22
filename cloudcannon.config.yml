@@ -1,0 +1,123 @@
+collections_config:
+  data:
+    path: data
+    output: false
+    disable_url: true
+
+data_config:
+  newsletter:
+    path: data/newsletter.json
+    _structures:
+      columns:
+        values:
+          - label: "Column"
+            icon: "view_column"
+            _inputs:
+              cards:
+                type: array
+                options:
+                  structures: _structures.cards
+
+      cards:
+        values:
+          - label: "Mass Schedule"
+            icon: "schedule"
+            image: "https://cloudcannon.com/documentation/static/logos/CloudCannon/CloudCannon_Symbol_Blue.svg"
+            value:
+              type: "mass_schedule"
+              title: "Mass Schedule"
+              icon: "fa-clock"
+              class: "mass-schedule"
+              days: []
+            _inputs:
+              days:
+                type: array
+                options:
+                  structures: _structures.mass_days
+          
+          - label: "Simple Text Card"
+            icon: "notes"
+            value:
+              type: "simple_text"
+              title: "Title"
+              icon: "fa-info"
+              content: "<p>Content goes here...</p>"
+
+          - label: "Accordion / Notices"
+            icon: "list"
+            value:
+              type: "accordion_group"
+              title: "Notices"
+              icon: "fa-clipboard-list"
+              items: []
+            _inputs:
+              items:
+                type: array
+                options:
+                  structures: _structures.accordion_items
+
+          - label: "Finance Card"
+            icon: "euro_symbol"
+            value:
+              type: "finance"
+              title: "Offertory"
+              icon: "fa-sack-dollar"
+              amount: "£0.00"
+              rows: []
+              total_row: { label: "Total", value: "£0.00" }
+              extra_rows: []
+
+      mass_days:
+        values:
+          - label: "Mass Day"
+            value:
+              title: "MON 1 JAN"
+              meta: []
+            _inputs:
+              meta:
+                type: array
+                options:
+                  structures: _structures.mass_meta
+
+      mass_meta:
+        values:
+          - label: "Feast/Detail"
+            value:
+              text: "Feast Day"
+              style: "normal"
+            _inputs:
+              style:
+                type: select
+                options:
+                  values:
+                    - normal
+                    - italic
+                    - bold-highlight
+
+      accordion_items:
+        values:
+          - label: "Item"
+            value:
+              summary: "Title"
+              content: "<p>Details...</p>"
+              open: false
+
+_inputs:
+  primary_color:
+    type: color
+    comment: "Main brand color (Buttons, Headers)"
+  secondary_color:
+    type: color
+    comment: "Accent color (Secondary accents)"
+  bg_color:
+    type: color
+  header:
+    type: object
+    options:
+      structure:
+        values:
+           - label: "Header Info"
+             value:
+               badge_text: "Weekly Newsletter"
+               title: "DATE"
+               subtitle: "Subtitle"

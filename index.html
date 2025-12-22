@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Stephen's Parish | Manor Park</title>
+    <link rel="stylesheet" href="style.css?v=7.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&family=Playfair+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.srv.whereby.com/embed/v2-embed.js" type="module"></script>
+</head>
+
+<body>
+    <nav id="glass-nav">
+        <div class="nav-logo">
+            <img src="image/Logo1.png" alt="St. Stephen Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#mass-times-section">Mass Times</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="#sacraments-section">Sacraments</a></li>
+            <li><a href="#contact-modal-overlay" id="contact-link">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button class="hamburger-menu" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Mobile Nav Overlay -->
+        <div class="mobile-nav-overlay">
+            <button class="close-mobile-nav" aria-label="Close Menu">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="#" class="mobile-link">Home</a></li>
+                <li><a href="#mass-times-section" class="mobile-link">Mass Times</a></li>
+                <li><a href="newsletter.html" class="mobile-link">Newsletter</a></li>
+                <li><a href="#sacraments-section" class="mobile-link">Sacraments</a></li>
+                <li><a href="#contact-modal-overlay" class="mobile-link" id="mobile-contact-link">Contact</a></li>
+            </ul>
+        </div>
+
+        <a href="https://www.dioceseofbrentwood.net/donations/?parish=manor-park"
+            class="donate-btn desktop-donate">Donate</a>
+    </nav>
+
+    <section id="hero">
+        <video id="hero-background-video" muted autoplay playsinline loop>
+            <source src="video/scene.webm" type="video/webm">
+            <source src="video/scene.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+
+        <div id="hero-main-text">
+            <p class="pre-title">Welcome to</p>
+            <h1 class="st-stephens-title">
+                <span class="line-1">St. Stephen's</span>
+                <span class="line-2">Parish</span>
+            </h1>
+            <div class="location-pill">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Manor Park, London</span>
+            </div>
+        </div>
+        <div class="scroll-indicator-btn"
+            onclick="document.getElementById('welcome-section').scrollIntoView({behavior: 'smooth'})">
+            <svg class="center-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+            </svg>
+        </div>
+    </section>
+
+
+
+    <div class="welcome-panel" id="welcome-section">
+        <video class="panel-background-video" muted autoplay playsinline loop>
+            <source src="video/oliva.webm" type="video/webm">
+        </video>
+        <div class="panel-overlay"></div>
+        <div class="welcome-content-wrapper">
+            <div class="bento-links-grid">
+                <a href="newsletter.html" class="bento-card-link">
+                    <span class="bento-icon"><i class="fa-solid fa-newspaper"></i></span>
+                    <span class="bento-label">Newsletter</span>
+                </a>
+                <a href="why_catholic.html" class="bento-card-link">
+                    <span class="bento-icon"><i class="fa-solid fa-church"></i></span>
+                    <span class="bento-label">RCIA</span>
+                    <span class="bento-subtitle">Rite of Christian Initiation of Adults</span>
+                </a>
+                <a href="#" class="bento-card-link">
+                    <span class="bento-icon"><i class="fa-solid fa-cross"></i></span>
+                    <span class="bento-label">Catholic Faith</span>
+                    <span class="bento-subtitle">Coming soon</span>
+                </a>
+                <a href="#" class="bento-card-link" onclick="openSchools(); return false;">
+                    <span class="bento-icon"><i class="fa-solid fa-school"></i></span>
+                    <span class="bento-label">Our Schools</span>
+                </a>
+            </div>
+
+            <div id="schools-overlay" class="schools-grid-overlay hidden">
+                <button class="close-schools-btn" onclick="closeSchools()"><i class="fa-solid fa-times"></i></button>
+
+                <!-- Schools Header (Visible on Mobile) -->
+                <div class="schools-mobile-header"
+                    style="display: none; justify-content: space-between; align-items: center; margin-bottom: 20px; width: 100%;">
+                    <div>
+                        <h2
+                            style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--text-main); margin: 0;">
+                            Our Schools</h2>
+                    </div>
+                    <button onclick="closeSchools()" class="action-btn map-btn"
+                        style="background: white; color: var(--text-main); border: 1px solid var(--stone-grey); box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 8px 15px; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; border-radius: 4px; cursor: pointer; margin-right: 10px;">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Home
+                    </button>
+                </div>
+                <a href="https://st-winefrides.newham.sch.uk/" target="_blank" class="school-card">
+                    <div class="school-bg" style="background-image: url('image/winefrides.jpg')"></div>
+                    <div class="school-content">
+                        <h3>St Winefride’s</h3>
+                        <p>Catholic Primary School</p>
+                    </div>
+                </a>
+                <a href="https://www.stangelas-ursuline.co.uk/" target="_blank" class="school-card">
+                    <div class="school-bg" style="background-image: url('image/Angelas.jpg')"></div>
+                    <div class="school-content">
+                        <h3>St Angela's</h3>
+                        <p>Ursuline School</p>
+                    </div>
+                </a>
+                <a href="https://www.stbons.org/" target="_blank" class="school-card">
+                    <div class="school-bg" style="background-image: url('image/Bonaventure.jpg')"></div>
+                    <div class="school-content">
+                        <h3>St Bonaventure's</h3>
+                        <p>School</p>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <div class="welcome-text-container">
+                <h2 class="editorial-heading">
+
+                    <span class="welcome-title">St. Stephen's</span>
+                    <span class="italic">Roman Catholic Parish</span>
+                </h2>
+                <p class="editorial-body">
+                    A community in eternal unity with the Holy Trinity, come and participate.
+                </p>
+
+            </div>
+            <div class="scroll-indicator-btn"
+                onclick="document.getElementById('mass-times-section').scrollIntoView({behavior: 'smooth'})">
+                <svg class="center-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <section id="content">
+
+        <div id="mass-times-section" class="rectangles-container">
+
+            <div id="mass-rectangle" class="expandable-rectangle open travel-card">
+                <div class="vertical-text">Mass Times</div>
+                <div class="card-bg-image" style="background-image: url('image/Mass.jpg');"></div>
+                <div class="glass-overlay"></div>
+                <div class="card-content">
+                    <h3>Weekly Liturgy</h3>
+                    <div
+                        style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                        <h4
+                            style="color: var(--sacred-gold); margin: 0 0 5px 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                            WED 24 DEC - CHRISTMAS EVE</h4>
+                        <p style="font-size: 1rem; line-height: 1.4; margin: 0; font-style: italic;">
+                            6.00 pm Children’s Mass<br>
+                            8.00 pm Carol Service<br>
+                            9.30 pm "Midnight" Mass
+                        </p>
+                        <br>
+                        <h4
+                            style="color: var(--sacred-gold); margin: 0 0 5px 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                            THU 25 DEC - CHRISTMAS DAY</h4>
+                        <p style="font-size: 1rem; line-height: 1.4; margin: 0; font-style: italic;">
+                            THE NATIVITY OF THE LORD<br>
+                            9.00 am Mass<br>
+                            11.00 am Mass
+                        </p>
+                    </div>
+                    <div class="schedule-grid">
+                        <div class="schedule-col">
+                            <h4>Weekdays</h4>
+                            <p>09:15 AM</p>
+                        </div>
+                        <div class="schedule-col">
+                            <h4>Saturday Vigil</h4>
+                            <p>06:00 PM</p>
+                        </div>
+                        <div class="schedule-col">
+                            <h4>Sunday</h4>
+                            <p>09:00 & 11:00</p>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://share.google/8fvvOZnT10sjER1b3" target="_blank" class="action-btn"><i
+                                class="fa-solid fa-map"></i> Directions</a>
+                        <button class="action-btn">Livestream</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="confession-rectangle" class="expandable-rectangle closed travel-card">
+                <div class="vertical-text">Confession</div>
+                <div class="card-bg-image" style="background-image: url('image/confession.jpeg');"></div>
+                <div class="glass-overlay"></div>
+                <div class="card-content">
+                    <h3>Reconciliation</h3>
+                    <p style="font-style: italic; opacity: 0.8;">"Whose sins you forgive are forgiven them"</p>
+                    <div class="schedule-grid">
+                        <div class="schedule-col">
+                            <h4>Friday</h4>
+                            <p>After 9:15 Mass</p>
+                        </div>
+                        <div class="schedule-col">
+                            <h4>Saturday</h4>
+                            <p>5:00 PM - 5:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="adoration-rectangle" class="expandable-rectangle closed travel-card">
+                <div class="vertical-text">Eucharistic<br>Adoration</div>
+                <div class="card-bg-image" style="background-image: url('image/eucharistic.jpg');"></div>
+                <div class="glass-overlay"></div>
+                <div class="card-content">
+                    <h3>Holy Hour</h3>
+                    <p style="font-style: italic; opacity: 0.8;">Silent prayer before the Blessed Sacrament</p>
+                    <div class="schedule-grid">
+                        <div class="schedule-col">
+                            <h4>Friday</h4>
+                            <p>After 9:15 Mass</p>
+                        </div>
+                        <div class="schedule-col">
+                            <h4>Saturday</h4>
+                            <p>5:00 PM - 5:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rosary-rectangle" class="expandable-rectangle closed travel-card">
+                <div class="vertical-text">Pray the<br>Rosary</div>
+                <div class="card-bg-image" style="background-image: url('image/rosaryb.webp');"></div>
+                <div class="glass-overlay"></div>
+                <div class="card-content centered-content">
+                    <h3>Pray the<br>Rosary</h3>
+                    <div class="card-actions">
+                        <button class="action-btn" onclick="joinRosaryCall()">Pray with us</button>
+                    </div>
+                    <p style="margin-top: 10px; opacity: 0.8;">[ Coming soon ]</p>
+                </div>
+            </div>
+            <div class="scroll-indicator-btn"
+                onclick="document.getElementById('sacraments-section').scrollIntoView({behavior: 'smooth'})">
+                <svg class="center-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                </svg>
+            </div>
+        </div>
+
+        <section id="sacraments-section">
+            <div class="sacraments-panel">
+                <h2 class="editorial-heading" style="text-align: center;">The Seven <span
+                        class="italic">Sacraments</span></h2>
+                <div class="sacraments-squares-container">
+                    <div class="sacrament-square" data-id="baptism">
+                        <p>Baptism</p>
+                        <img src="image/Logo1.png" class="sacrament-logo" alt="Baptism">
+                    </div>
+                    <div class="sacrament-square" data-id="confirmation">
+                        <p>Confirmation</p>
+                        <img src="image/Logo1.png" class="sacrament-logo" alt="Confirmation">
+                    </div>
+                    <div class="sacrament-square" data-id="eucharist">
+                        <p>Eucharist</p>
+                        <img src="image/Logo1.png" class="sacrament-logo" alt="Eucharist">
+                    </div>
+                    <div class="sacrament-square" data-id="penance">
+                        <p>Reconciliation</p>
+                        <img src="image/Logo1.png" class="sacrament-logo" alt="Penance">
+                    </div>
+                    <div class="sacrament-square" data-id="anointing">
+                        <p>Anointing</p>
+                        <img src="image/Logo1.png" class="sacrament-logo" alt="Anointing">
+                    </div>
+                    <div class="sacrament-square" data-id="holy-orders">
+                        <p>Holy Orders</p>
+                        <img src="image/Logo1.png" class="sacrament-logo" alt="Holy Orders">
+                    </div>
+                    <div class="sacrament-square" data-id="matrimony">
+                        <p>Matrimony</p>
+                        <img src="image/Logo1.png" class="sacrament-logo" alt="Matrimony">
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator-btn"
+                onclick="document.getElementById('hero').scrollIntoView({behavior: 'smooth'})">
+                <svg class="center-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 11l5-5 5 5M7 18l5-5 5 5" />
+                </svg>
+            </div>
+        </section>
+
+    </section>
+
+    <div id="sacrament-modal-overlay" class="modal-overlay hidden">
+        <div class="modal-glass-card">
+            <button id="close-modal-btn"><i class="fa-solid fa-times"></i></button>
+            <div class="modal-content custom-scroll" id="modal-body"></div>
+        </div>
+    </div>
+
+    <div id="contact-modal-overlay" class="modal-overlay hidden">
+        <div class="contact-modal-glass-card">
+            <button id="close-contact-modal-btn"><i class="fa-solid fa-times"></i></button>
+            <div class="contact-grid">
+                <div class="contact-details custom-scroll">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>146 Little Ilford Lane<br>Manor Park, London</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>020 8478 1895</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>manorpark@brcdt.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <div>
+                            <h4>Website</h4>
+                            <p>www.ss-stephenandnicholas.org.uk</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <div>
+                            <h4>Clergy</h4>
+                            <p>Fr. Tony Grant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map-container">
+                    <iframe
+                        src="https://maps.google.com/maps?q=St.+Stephen’s+Catholic+Church+146+Little+Ilford+Lane,+Manor+Park,+London+E12+5PJ&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=7.0"></script>
+</body>
+
+</html>
